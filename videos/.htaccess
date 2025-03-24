@@ -1,0 +1,5 @@
+AddType video/mp4 .mp4
+<FilesMatch "\.(mp4)$">
+  Order Allow,Deny
+  Allow from all
+</FilesMatch>

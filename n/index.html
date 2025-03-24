@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOARDSTORY STUDIO | WELCOME PAGE</title>
+    <link rel="stylesheet" href="styles-land.css">
+    <style>
+        /* Style for the video to be initially in the foreground */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10; /* Initially in the foreground */
+            transition: z-index 1s ease; /* Smooth transition for z-index */
+        }
+
+        /* Container will appear after video fades out */
+        .container {
+            display: none; /* Initially hidden */
+            position: relative;
+            z-index: 20; /* Content will be in front of the video */
+            transition: opacity 1s ease; /* Smooth transition for visibility */
+            opacity: 0; /* Initially hidden */
+        }
+
+        .container.visible {
+            display: block;
+            opacity: 1; /* Show after video is moved to the background */
+        }
+
+        /* Ensuring other layers are positioned */
+        .cutout-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 5; /* Ensure it's above the video but below content */
+        }
+
+        .content-layer {
+            position: relative;
+            z-index: 10;
+            color: white;
+        }
+
+        .logo {
+            position: absolute;
+        }
+    </style>
+    <script>
+        function adjustVideoPosition() {
+            var video = document.getElementById('video-background');
+            var aspectRatio = 16 / 9; // Assuming 16:9 aspect ratio for the video
+            var windowAspectRatio = window.innerWidth / window.innerHeight;
+
+            if (windowAspectRatio > aspectRatio) {
+                // Window is wider than the video
+                var videoHeight = window.innerWidth / aspectRatio;
+                video.style.width = '100%';
+                video.style.height = videoHeight + 'px';
+                video.style.left = '0';
+                video.style.top = -(videoHeight - window.innerHeight) / 2 + 'px';
+            } else {
+                // Window is taller than the video
+                var videoWidth = window.innerHeight * aspectRatio;
+                video.style.width = videoWidth + 'px';
+                video.style.height = '100%';
+                video.style.left = -(videoWidth - window.innerWidth) / 2 + 'px';
+                video.style.top = '0';
+            }
+        }
+
+        function updateLayout() {
+            const container = document.querySelector('.container');
+            const cutoutLayer = document.querySelector('.cutout-layer');
+            const logo = document.querySelector('.logo');
+
+            const width = container.offsetWidth;
+            const height = container.offsetHeight;
+
+            if (width >= 800) {
+                // Cutout layer logic
+                const cutoutStartX = width * 0.3;
+                const cutoutStartY = height * 0.53;
+                const cutoutEndY = height * 0.62;
+
+                const path = `
+                    M 0 0 
+                    H ${width} 
+                    V ${height} 
+                    H 0 
+                    V 0 
+                    M ${cutoutStartX} ${cutoutStartY} 
+                    V ${cutoutEndY} 
+                    L ${width} ${height} 
+                    V ${height * 0.1} 
+                    Z
+                `.replace(/\s+/g, ' ').trim();
+
+                cutoutLayer.style.clipPath = `path('${path}')`;
+
+                // Logo positioning logic
+                const logoAspectRatio = 340.87 / 269.93; // Width / Height of the SVG
+                const logoHeightRatio = 0.15; // Reduced from 0.18 to make the logo smaller
+                const logoHeight = Math.min(height * logoHeightRatio, width * logoHeightRatio / logoAspectRatio);
+                const logoWidth = logoHeight * logoAspectRatio;
+
+                const logoTop = cutoutStartY - (logoHeight * 0.01); // Adjusted to move the logo up slightly
+                const logoLeft = cutoutStartX - (logoWidth * 1.2); // Adjusted to move the logo left slightly
+
+                logo.style.width = `${logoWidth}px`;
+                logo.style.height = `${logoHeight}px`;
+                logo.style.top = `${logoTop}px`;
+                logo.style.left = `${logoLeft - (height * 0.03)}px`;
+            }
+        }
+
+        window.onload = function () {
+            adjustVideoPosition();
+
+            // Wait for 8 seconds, then push the video to the background and reveal the content
+            setTimeout(function () {
+                var video = document.querySelector('.video-background');
+                var contentContainer = document.querySelector('.container');
+
+                // Move video to the background
+                video.style.zIndex = "1"; // Lower z-index to push it behind
+                // Show content container
+                contentContainer.classList.add('visible');
+
+                // Update the layout after the video is moved to the background
+                updateLayout();
+            }, 8000); // 8000 milliseconds = 8 seconds
+        };
+
+        window.onresize = function () {
+            adjustVideoPosition();
+            updateLayout(); // Recalculate layout on window resize
+        };
+    </script>
+</head>
+<body>
+    <div class="video-background">
+        <video id="video-background" autoplay muted loop>
+            <source src="./BackgroundVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="container">
+        <div class="cutout-layer"></div>
+        <div class="content-layer">
+            <h1>BOARDSTORY</h1>
+            <div class="logo">
+                <a href="/../bss/home.html" style="display:block; height: 100%; width: 100%;"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="LandingScript.js"></script>
+</body>
+</html>

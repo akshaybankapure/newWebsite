@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- bootstrap grid css -->
+    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/plugins/swiper.min.css">
+    <!-- fancybox css -->
+    <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+    <!-- BoardStories scss -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- page name -->
+    <title>BoardStories</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+          // Get a reference to the logo image
+          const logoImg = document.getElementById('logo');
+      
+          // Function to change the logo based on viewport width
+          function changeLogoBasedOnWidth() {
+            // Check viewport width
+            const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+      
+            // Check if viewport width is less than 1000px
+            if (viewportWidth < 1000) {
+              // Change the logo source to white version
+              logoImg.src = './img/logo/Logo-h-white.png';
+            } else {
+              // Change the logo source to black version
+              logoImg.src = './img/logo/Logo-h-black.svg';
+            }
+          }
+      
+          // Call the function initially
+          changeLogoBasedOnWidth();
+      
+          // Listen for window resize events to update the logo
+          window.addEventListener('resize', changeLogoBasedOnWidth);
+        });
+      </script>
+      
+
+</head>
+
+<body>
+
+    <!-- wrapper -->
+    <div class="absoftz-wrapper" id="top">
+
+        <!-- cursor -->
+        <div class="absoftz-ball">
+            <span class="absoftz-icon-1">
+                <svg viewBox="0 0 128 128">
+                    <path d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2	c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2	L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9	z" />
+                </svg>
+            </span>
+            <div class="absoftz-more-text">More</div>
+            <div class="absoftz-choose-text">Сhoose</div>
+        </div>
+        <!-- cursor end -->
+
+        <!-- preloader -->
+        <div class="absoftz-preloader">
+            <div class="absoftz-preloader-animation">
+                <div class="absoftz-pos-abs absoftz-animation-1">
+                    <p class="absoftz-h3 absoftz-muted absoftz-thin">Pioneering</p>
+                    <p class="absoftz-h3 absoftz-muted">Creative</p>
+                    <p class="absoftz-h3 absoftz-muted absoftz-thin">Excellence</p>
+                </div>
+                <div class="absoftz-pos-abs absoftz-animation-2">
+                    <div class="absoftz-reveal-frame">
+                        <p class="absoftz-reveal-box"></p>
+                        <p class="absoftz-h3 absoftz-muted absoftz-thin">boardstory.studio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- preloader end -->
+
+        <!-- scrollbar progress -->
+        <div class="absoftz-progress-track">
+            <div class="absoftz-progress"></div>
+        </div>
+        <!-- scrollbar progress end -->
+
+        <!-- menu -->
+        <div class="absoftz-menu-frame">
+            <!-- frame clone -->
+            <div class="absoftz-frame-top">
+                <a href="home.html" class="absoftz-logo"> <img src="./img/logo/Logo-h-black.svg" alt="" style="max-width: 15vw;"> </a>
+                <div class="absoftz-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+            <!-- frame clone end -->
+            <div class="container">
+                <div class="absoftz-menu-content">
+                    <div class="row">
+                        <div class="col-xl-5">
+
+                            <nav class="absoftz-main-menu" id="swupMenu">
+                                <ul>
+                                    <li class="absoftz-has-children">
+                                        <a href="#">Home</a>
+                                        <ul>
+                                            <li><a href="home.html">Landing page</a></li>
+                                            <li><a href="home.html">Homepage</a></li>
+                                            <li><a href="portfolio-3.html">Portfolio slider</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="absoftz-has-children">
+                                        <a href="#">Portfolio</a>
+                                        <ul>
+                                            <li><a href="portfolio-1.html">Grid type 1</a></li>
+                                            <li><a href="portfolio-2.html">Grid type 2</a></li>
+                                            <li><a href="portfolio-3.html">Slider</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="absoftz-has-children">
+                                        <a href="#">Services</a>
+                                        <ul>
+                                             <li><a href="services.html">Services List</a></li>
+                                            <li><a href="Service-CharacterConceptArt.html">Service - Character Concept Art</a></li>
+                                            <li><a href="service.html">Single service</a></li>
+                                            <li><a href="Service-CharacterConceptArt.html">Character Concept Art</a></li>
+                                            <li><a href="Service-LocationConceptArt.html">Location Concept Art</a></li>
+                                            <li><a href="Service-BuildingPropsVehicles.html">Building, Props and Vehicle Designs</a></li>
+                                            <li><a href="Service-StoryboardAnimatics.html">Storyboard and Animatics</a></li>
+                                            <li><a href="Service-MotionPoster.html">Motion Poster</a></li>
+                                            <li><a href="Service-TitleDesign.html">Title Design</a></li>
+                                            <li><a href="Service-VFX.html">VFX</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="absoftz-has-children">
+                                        <a href="#">Newsletter</a>
+                                        <ul>
+                                            <li><a href="blog.html">Blog List</a></li>
+                                            <li><a href="publication.html">Publication</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="absoftz-has-children absoftz-active">
+                                        <a href="#">Other pages</a>
+                                        <ul>
+                                            <li><a href="team.html">Team</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="404.html">404</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                        <div class="col-xl-7">
+
+                            <div class="absoftz-menu-right-frame">
+                                <div class="absoftz-animation-in">
+                                    <div class="absoftz-animation-frame">
+                                        <div class="absoftz-animation absoftz-position-1 absoftz-scale" data-value-1="2" data-value-2="2"></div>
+                                    </div>
+                                </div>
+                                <div class="absoftz-menu-right">
+                                    <div class="row">
+                                        <div class="col-lg-8 absoftz-mb-60">
+
+                                            <h6 class="absoftz-muted absoftz-mb-30">Projects</h6>
+
+                                            <ul class="absoftz-menu-list">
+                                                <li><a href="project-1.html" class="absoftz-light-soft">Character Design</a></li>
+                                                <li><a href="project-2.html" class="absoftz-light-soft">Story Telling Action Project</a></li>
+                                                <li><a href="project-3.html" class="absoftz-light-soft">Some Famouse Comic Book</a></li>
+                                                <li><a href="project-4.html" class="absoftz-light-soft">Cascade of Lava</a></li>
+                                                <li><a href="project-5.html" class="absoftz-light-soft">Concept Art and World-Building</a></li>
+                                                <li><a href="project-6.html" class="absoftz-light-soft">Cadbury's Silk Story Project</a></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="col-lg-4 absoftz-mb-60">
+
+                                            <h6 class="absoftz-muted absoftz-mb-30">Useful links</h6>
+
+                                            <ul class="absoftz-menu-list">
+                                                <li><a href="#" class="absoftz-light-soft">Privacy Policy</a></li>
+                                                <li><a href="#" class="absoftz-light-soft">Terms and conditions</a></li>
+                                                <li><a href="#" class="absoftz-light-soft">Cookie Policy</a></li>
+                                                <li><a href="#" class="absoftz-light-soft">Careers</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                    <div class="absoftz-divider absoftz-mb-60"></div>
+                                    <div class="row justify-content-between">
+
+                                        <div class="col-lg-4 absoftz-mb-60">
+
+                                            <h6 class="absoftz-muted absoftz-mb-30">India</h6>
+
+                                            <p class="absoftz-light-soft absoftz-up">Indranagar, Bangalore <span class="absoftz-no-wrap">+91-9611961446</span></p>
+
+                                        </div>
+                                        <div class="col-lg-4 absoftz-mb-60">
+
+                                            <h6 class="absoftz-muted absoftz-mb-30">Germany</h6>
+
+                                            <p class="absoftz-light-soft">Indranagar, Bangalore <span class="absoftz-no-wrap">+31 174 705 811</span></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- menu -->
+
+        <!-- curtain -->
+        <div class="absoftz-curtain"></div>
+        <!-- curtain end -->
+
+        <!-- frame -->
+        <div class="absoftz-frame">
+            <div class="absoftz-frame-top">
+                <a href="home.html" class="absoftz-logo"> <img src="./img/logo/Logo-h-black.svg" alt="" id="logo"> </a>
+                <div class="absoftz-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+            <div class="absoftz-frame-bottom">
+                <div class="absoftz-current-page"></div>
+                <div class="absoftz-back-to-top">
+                    <a href="#top" class="absoftz-link absoftz-dark absoftz-arrow-place">
+                        <span>Back to top</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- frame end -->
+
+        <!-- content -->
+        <div class="absoftz-content">
+            <div id="swupMain" class="absoftz-main-transition">
+
+                <!-- banner -->
+                <div class="absoftz-inner-banner">
+                    <div class="absoftz-banner-content absoftz-up">
+                        <div class="absoftz-animation-frame">
+                            <div class="absoftz-animation absoftz-position-4 absoftz-dark absoftz-scale" data-value-1="6" data-value-2="1.4"></div>
+                        </div>
+                        <div class="container">
+                            <ul class="absoftz-breadcrumbs absoftz-mb-60">
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="portfolio-1.html">Portfolio</a></li>
+                                <li><a href="project-1.html">Project</a></li>
+                            </ul>
+                            <h1 class="absoftz-mb-60">Air Pro <span class="absoftz-thin">by Molekule</span></h1>
+                            <a href="#project" class="absoftz-link absoftz-dark absoftz-arrow-place absoftz-down-arrow">
+                                <span>Read more</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- banner end -->
+
+                <!-- project -->
+                <section class="absoftz-p-120-0">
+                    <div class="absoftz-image-frame absoftz-fw absoftz-up">
+                        <img src="img/works/5/1.jpg" alt="image">
+                        <a data-fancybox="gallery" data-no-swup href="img/works/5/1.jpg" class="absoftz-zoom-btn">
+                            <img src="img/icons/zoom.svg" alt="zoom">
+                        </a>
+                    </div>
+                    <div class="container absoftz-p-0-120" id="project">
+                        <div class="absoftz-info absoftz-up">
+                            <div>Client: &nbsp;<span class="absoftz-dark">LOREM IPSUM</span></div>
+                            <div>Date: &nbsp;<span class="absoftz-dark">April 2024</span></div>
+                            <div>Author: &nbsp;<span class="absoftz-dark">Sabu Sarasan</span></div>
+                        </div>
+                        <div class="absoftz-p-120-0">
+                            <div class="swiper-container absoftz-2-slider absoftz-up">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+
+                                        <div class="absoftz-image-frame absoftz-square absoftz-drag">
+                                            <img src="img/works/5/2.jpg" alt="image">
+                                            <a data-fancybox="gallery" data-no-swup href="img/works/5/2.jpg" class="absoftz-zoom-btn">
+                                                <img src="img/icons/zoom.svg" alt="zoom">
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-slide">
+
+                                        <div class="absoftz-image-frame absoftz-square absoftz-drag">
+                                            <img src="img/works/5/3.gif" alt="image">
+                                            <a data-fancybox="gallery" data-no-swup href="img/works/5/3.gif" class="absoftz-zoom-btn">
+                                                <img src="img/icons/zoom.svg" alt="zoom">
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-slide">
+
+                                        <div class="absoftz-image-frame absoftz-square absoftz-drag">
+                                            <img src="img/works/5/4.jpg" alt="image">
+                                            <a data-fancybox="gallery" data-no-swup href="img/works/5/4.jpg" class="absoftz-zoom-btn">
+                                                <img src="img/icons/zoom.svg" alt="zoom">
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-slide">
+
+                                        <div class="absoftz-image-frame absoftz-square absoftz-drag">
+                                            <img src="img/works/5/5.gif" alt="image">
+                                            <a data-fancybox="gallery" data-no-swup href="img/works/5/5.gif" class="absoftz-zoom-btn">
+                                                <img src="img/icons/zoom.svg" alt="zoom">
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-slide">
+
+                                        <div class="absoftz-image-frame absoftz-square absoftz-drag">
+                                            <img src="img/works/5/6.jpg" alt="image">
+                                            <a data-fancybox="gallery" data-no-swup href="img/works/5/6.jpg" class="absoftz-zoom-btn">
+                                                <img src="img/icons/zoom.svg" alt="zoom">
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between absoftz-p-120-120">
+                                <div class="col-lg-5">
+                                    <h3 class="absoftz-up absoftz-mb-60">Simplicity, elegance, innovation!</h3>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p class="absoftz-up absoftz-mb-30">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and Visual Developmet editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+
+                                    <p class="absoftz-up">Presents a simple and quiet state when not in use, delivering a gentle and security.At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absoftz-image-frame absoftz-horizontal absoftz-up absoftz-mb-120">
+                            <img src="img/works/5/7.gif" alt="image">
+                            <a data-fancybox="gallery" data-no-swup href="img/works/5/7.gif" class="absoftz-zoom-btn">
+                                <img src="img/icons/zoom.svg" alt="zoom">
+                            </a>
+                        </div>
+                        <div class="absoftz-works-nav absoftz-up">
+                            <a href="project-4.html" class="absoftz-link absoftz-dark absoftz-arrow-place absoftz-icon-left">
+                                <span>Prev project</span>
+                            </a>
+                            <a href="portfolio-1.html" class="absoftz-link absoftz-dark">
+                                <span>All projects</span>
+                            </a>
+                            <a href="project-6.html" class="absoftz-link absoftz-dark absoftz-arrow-place">
+                                <span>Next project</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- project end -->
+
+                <!-- call to action -->
+                <section class="absoftz-soft-bg">
+                    <div class="container absoftz-p-120-120">
+                        <div class="row">
+                            <div class="col-lg-10">
+
+                                <span class="absoftz-suptitle absoftz-suptitle-right absoftz-suptitle-dark absoftz-up">Looking to make your mark? We'll help you turn <br> your project into a success story.</span>
+
+                            </div>
+                        </div>
+                        <div class="absoftz-center">
+                            <h2 class="absoftz-up absoftz-mb-60">Ready to bring your <span class="absoftz-thin">ideas to</span> life? <br> We're <span class="absoftz-thin">here to help</span></h2>
+                            <div class="absoftz-up"><a href="contact.html" class="absoftz-button absoftz-arrow-place"><span>Contact us</span></a></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- call to action end -->
+
+                <!-- footer -->
+                <footer class="absoftz-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="container absoftz-p-120-60">
+                            <div class="row justify-content-between">
+                                <div class="col-md-4 col-lg-4 absoftz-mb-60">
+
+                                    <div class="absoftz-muted absoftz-logo absoftz-up absoftz-mb-30">BoardStories.</div>
+
+                                    <p class="absoftz-light-soft absoftz-up absoftz-mb-30">Subscribe our newsletter:</p>
+
+                                    <form class="absoftz-subscribe-form absoftz-up">
+                                        <input type="text" placeholder="Enter our email">
+                                        <button type="submit" class="absoftz-button absoftz-icon-button-sm absoftz-arrow-place"></button>
+                                    </form>
+
+                                </div>
+                                <div class="col-md-7 col-lg-6">
+                                    <div class="row justify-content-end">
+                                        <div class="col-md-6 col-lg-7">
+
+                                            <nav class="absoftz-footer-menu absoftz-mb-60">
+                                                <ul>
+                                                    <li class="absoftz-up absoftz-active">
+                                                        <a href="home.html">Home</a>
+                                                    </li>
+                                                    <li class="absoftz-up">
+                                                        <a href="#">Portfolio</a>
+                                                    </li>
+                                                    <li class="absoftz-up">
+                                                        <a href="services.html">Services</a>
+                                                    </li>
+                                                    <li class="absoftz-up">
+                                                        <a href="contact.html">Contact</a>
+                                                    </li>
+                                               
+                                                </ul>
+                                            </nav>
+
+                                        </div>
+                                        <div class="col-md-6 col-lg-5">
+
+                                            <ul class="absoftz-menu-list absoftz-up absoftz-mb-60">
+                                                <li><a href="#" class="absoftz-light-soft">Privacy Policy</a></li>
+                                                <li><a href="#" class="absoftz-light-soft">Terms and conditions</a></li>
+                                                <li><a href="#" class="absoftz-light-soft">Cookie Policy</a></li>
+                                                <li><a href="#" class="absoftz-light-soft">Careers</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between flex-sm-row-reverse">
+                                <div class="col-md-7 col-lg-6">
+
+                                    <div class="row justify-content-between">
+
+                                        <div class="col-md-6 col-lg-5 absoftz-mb-60">
+
+                                            <h6 class="absoftz-muted absoftz-up absoftz-mb-30">India</h6>
+
+                                            <p class="absoftz-light-soft absoftz-up">Indranagar, Bangalore <span class="absoftz-no-wrap">+91-9611961446</span></p>
+
+                                        </div>
+                                       
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4 col-lg-6 absoftz-mb-60">
+
+                                    <div class="absoftz-vert-between">
+                                        <div class="absoftz-mb-30">
+                                            <ul class="absoftz-social-icons absoftz-up">
+                                                <li><a href="#" target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                                                <li><a href="#" target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                                                <li><a href="#" target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                                                <li><a href="#" target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p class="absoftz-light-soft absoftz-up">© Copyright 2024 - ABSoftz.in All Rights Reserved.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- footer end -->
+
+                <!-- hidden elements -->
+                <div class="absoftz-hidden-elements">
+                    <div class="absoftz-dodecahedron">
+                        <div class="absoftz-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="absoftz-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="absoftz-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="absoftz-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="absoftz-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="absoftz-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="absoftz-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="absoftz-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="absoftz-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="absoftz-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="absoftz-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="absoftz-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="absoftz-arrow">
+                        <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
+                    </svg>
+
+                    <svg width="250" viewBox="0 0 300 1404" fill="none" xmlns="http://www.w3.org/2000/svg" class="absoftz-lines">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z" class="absoftz-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z" class="absoftz-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z" class="absoftz-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M300 1175H0V1174H300V1175Z" class="absoftz-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z" class="absoftz-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z" class="absoftz-move" />
+                    </svg>
+                </div>
+                <!-- hidden elements end -->
+
+            </div>
+        </div>
+        <!-- content -->
+    </div>
+    <!-- wrapper end -->
+
+    <!-- jQuery js -->
+    <script src="js/plugins/jquery.min.js"></script>
+    <!-- swup js -->
+    <script src="js/plugins/swup.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- fancybox js -->
+    <script src="js/plugins/fancybox.min.js"></script>
+    <!-- gsap js -->
+    <script src="js/plugins/gsap.min.js"></script>
+    <!-- scroll smoother -->
+    <script src="js/plugins/smooth-scroll.js"></script>
+    <!-- scroll trigger js -->
+    <script src="js/plugins/ScrollTrigger.min.js"></script>
+    <!-- scroll to js -->
+    <script src="js/plugins/ScrollTo.min.js"></script>
+    <!-- BoardStories js -->
+<script src="js/main.js"></script>
+
+
+</body>
+
+</html>
